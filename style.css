@@ -1,0 +1,236 @@
+/* Main page */
+
+/* .stApp {
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(220, 200, 255, 0.45),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #fcfaff 0%,
+            #f7f1ff 100%
+        );
+} */
+
+.stApp {
+    background: #ffffff;
+}
+
+
+/* Main content width */
+
+.block-container {
+    max-width: 850px;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+}
+
+
+/* Headings */
+
+h1 {
+    color: #4d3275;
+    letter-spacing: -0.03em;
+}
+
+h2,
+h3 {
+    color: #62438d;
+}
+
+
+/* Radio buttons */
+
+div[role="radiogroup"] {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #e4d5f5;
+    border-radius: 18px;
+    padding: 1rem 1.2rem;
+}
+
+div[role="radiogroup"] label {
+    padding: 0.25rem 0;
+}
+
+
+/* Buttons */
+
+.stButton > button {
+    background: linear-gradient(
+        135deg,
+        #7b52ab,
+        #9a72c7
+    );
+    color: white;
+    border: none;
+    border-radius: 14px;
+    padding: 0.65rem 1.2rem;
+    font-weight: 600;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(
+        135deg,
+        #6c459c,
+        #8c61ba
+    );
+    color: white;
+    border: none;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(92, 57, 130, 0.2);
+}
+
+.stButton > button:active {
+    transform: translateY(0);
+}
+
+
+/* Text area */
+
+.stTextArea textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #d9c5ee;
+    border-radius: 14px;
+}
+
+.stTextArea textarea:focus {
+    border-color: #8f64bc;
+    box-shadow: 0 0 0 1px #8f64bc;
+}
+
+
+/* Slider */
+
+.stSlider [data-baseweb="slider"] {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+/* Alert cards */
+
+div[data-testid="stAlert"] {
+    border-radius: 16px;
+    border: 1px solid rgba(127, 82, 171, 0.16);
+}
+
+
+/* Captions and dividers */
+
+.stCaption {
+    color: #756781;
+}
+
+hr {
+    border-color: #e4d8ef;
+}
+
+.monster-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.monster-image-container img {
+    image-rendering: auto;
+}
+
+/* Insights metrics */
+
+div[data-testid="stMetric"] {
+    background: linear-gradient(
+        145deg,
+        #fbf8ff,
+        #f2eaff
+    );
+    border: 1px solid #e4d5f5;
+    border-radius: 18px;
+    padding: 1rem 1.1rem;
+    min-height: 130px;
+    box-shadow: 0 6px 18px rgba(104, 72, 145, 0.08);
+}
+
+div[data-testid="stMetric"] label {
+    color: #756781 !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #4f3d62;
+    font-size: 2.3rem;
+    line-height: 1.1;
+}
+
+/* Recent entries table */
+
+div[data-testid="stDataFrame"] {
+    border: 1px solid #eadff5;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 16px rgba(104, 72, 145, 0.06);
+}
+
+/* Login screen */
+.login-card {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid #dbcaf3;
+    border-radius: 28px;
+    padding: 1.4rem 1.4rem 0.8rem 1.4rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 12px 30px rgba(126, 87, 194, 0.08);
+}
+
+.login-badge {
+    display: inline-block;
+    background: #efe7fb;
+    color: #6f5898;
+    border: 1px solid #dbcaf3;
+    border-radius: 999px;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.92rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.login-title {
+    margin: 0 0 0.4rem 0;
+    font-size: 3rem;
+    line-height: 1.05;
+    color: #2f3142;
+}
+
+.login-subtitle {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.05rem;
+    color: #756781;
+    line-height: 1.5;
+}
+
+/* Make login input softer */
+.stTextInput input {
+    border-radius: 16px !important;
+    border: 1px solid #d9c5ee !important;
+    background: rgba(255, 255, 255, 0.78) !important;
+}
+
+.login-card {
+    padding: 1.1rem 1.2rem 0.9rem 1.2rem;
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.login-title {
+    font-size: 2.4rem;
+    line-height: 1.05;
+}
+
+.login-subtitle {
+    margin-bottom: 0.2rem;
+}
