@@ -1,4 +1,5 @@
 from datetime import datetime
+from zoneinfo import ZoneInfo
 import base64
 import mimetypes
 from pathlib import Path
@@ -309,6 +310,7 @@ TRIGGER_OPTIONS = [
 ]
 
 def save_log(
+    date_time: datetime,
     state: str,
     monster: str,
     intensity_before: int,
@@ -355,7 +357,7 @@ def save_log(
         connection.execute(
             query,
             {
-                "date_time": datetime.now(),
+                "date_time": date_time,
                 "state": state,
                 "monster": monster,
                 "intensity_before": intensity_before,
@@ -548,8 +550,35 @@ if st.session_state.selected_state:
 
     st.write("### Check in with yourself")
 
+    default_now = datetime.now(
+        ZoneInfo("Asia/Ho_Chi_Minh")
+    )
+
+    date_col, time_col = st.columns(2)
+
+    with date_col:
+        log_date = st.date_input(
+            "Date",
+            value=default_now.date(),
+        )
+
+    with time_col:
+        log_time = st.time_input(
+            "Time",
+            value=default_now.time().replace(
+                second=0,
+                microsecond=0,
+            ),
+        )
+
+    log_datetime = datetime.combine(
+        log_date,
+        log_time,
+    )
+
     if st.button("Save to Panic Log"):
         save_log(
+            date_time=log_datetime,
             state=selected_state,
             monster=selected_help["monster"],
             intensity_before=intensity,
